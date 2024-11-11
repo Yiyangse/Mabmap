@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         testSection.innerHTML = `
             <div class="question-container">
-                <h2>당신의 매운맛 레벨은...</h2>
+                <h2>당신의 매운맛 레벨은...!</h2>
                 <div class="result-level">${level}</div>
                 <p>평균 점수: ${averageScore.toFixed(1)}/5.0</p>
                 <button class="answer-btn" onclick="location.reload()">다시 테스트하기</button>
