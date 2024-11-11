@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>맵맵 - 매운 맛 가이드</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">맵맵</div>
+        <nav class="header__nav">
+            <ul>
+                <li><a href="#about">맵맵이란?</a></li>
+                <li><a href="#mypage">마이 맵맵</a></li>
+                <li><a href="#recipe">오늘의 레시피</a></li>
+                <li><a href="#login">로그인</a></li>
+                <li><a href="#signup">회원가입</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro" id="introSection">
+            <div class="intro__content">
+                <div class="intro__text" id="introText">매운 음식 잘 드세요?</div>
+                <button class="start-button" id="startButton" style="display: none;">
+                    맵기단계 알아보러가기
+                    <i class="fas fa-pepper-hot"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- 테스트 섹션 (초기에는 숨김) -->
+        <section class="test-container" id="testSection" style="display: none;">
+            <div class="question-container">
+                <div class="question-number">Question <span id="currentQuestion">1</span>/10</div>
+                <div class="question" id="questionText"></div>
+                <div class="answers">
+                    <button class="answer-btn" data-score="1">전혀 그렇지 않다</button>
+                    <button class="answer-btn" data-score="2">그렇지 않다</button>
+                    <button class="answer-btn" data-score="3">보통이다</button>
+                    <button class="answer-btn" data-score="4">그렇다</button>
+                    <button class="answer-btn" data-score="5">매우 그렇다</button>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" id="progressBar"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__logo">맵맵</div>
+            <div class="footer__info">
+                <p>© 2024 Team Mapmap. All rights reserved.</p>
+                <p>Contact: info@mapmap.com</p>
+            </div>
+            <div class="footer__license">
+                Team Mapmap license
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    // 테스트 문항 데이터
+    const questions = [
+        "매운 음식을 먹으면 땀이 나나요?",
+        "매운 음식을 먹을 때 물을 자주 마시나요?",
+        "불닭볶음면을 완식할 수 있나요?",
+        "매운 음식을 먹고 난 후 속이 불편한가요?",
+        "친구들과 비교했을 때 매운 음식을 잘 먹는 편인가요?",
+        "매운 음식을 먹을 때 우유나 요구르트를 준비하나요?",
+        "평소에 매운 음식을 자주 찾아 먹나요?",
+        "새로운 매운 음식에 도전하는 것을 즐기나요?",
+        "매운 음식점에서 '매움 주의' 메뉴를 시도해본 적이 있나요?",
+        "매운 음식을 먹으면서 스트레스가 해소되나요?"
+    ];
+    </script>
+    <script src="../JS/script.js"></script>
+</body>
+</html>

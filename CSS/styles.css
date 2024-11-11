@@ -1,0 +1,231 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Reset & Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard-Regular', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header styles */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00BFB3;
+}
+
+.header__nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.header__nav a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.header__nav a:hover {
+    color: #00BFB3;
+}
+
+/* Intro section styles */
+.intro {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #00BFB3, #7C3AED);
+    transition: background 1s ease;
+}
+
+.intro__content {
+    text-align: center;
+    color: white;
+}
+
+.intro__text {
+    font-size: 3rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+.start-button {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background: white;
+    border: none;
+    border-radius: 50px;
+    color: #00BFB3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.start-button:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.start-button i {
+    margin-left: 0.5rem;
+}
+
+/* Test section styles */
+.test-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: #f5f5f5;
+}
+
+.question-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.question-number {
+    font-size: 1.2rem;
+    color: #00BFB3;
+    margin-bottom: 1rem;
+}
+
+.question {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.answer-btn {
+    padding: 1rem;
+    border: 2px solid #00BFB3;
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Pretendard-Regular', sans-serif;
+}
+
+.answer-btn:hover {
+    background: #00BFB3;
+    color: white;
+}
+
+.progress-bar {
+    margin-top: 2rem;
+    height: 10px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: #00BFB3;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+/* Footer styles */
+.footer {
+    background: #333;
+    color: white;
+    padding: 2rem;
+}
+
+.footer__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.footer__info {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer__license {
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header__nav {
+        display: none;
+    }
+    
+    .intro__text {
+        font-size: 2rem;
+    }
+    
+    .question {
+        font-size: 1.2rem;
+    }
+    
+    .footer__content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
