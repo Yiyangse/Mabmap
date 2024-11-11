@@ -94,8 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // 결과에 따른 레벨 결정
         let level;
-        if (averageScore < 2) level = "맵찔이";
-        else if (averageScore < 3) level = "맵초보";
+        if (averageScore < 2) level = "프로 맵맵러";
+        else if (averageScore < 3) level = "참매미";
         else if (averageScore < 4) level = "맵고수";
         else level = "맵신";
         
