@@ -1,0 +1,143 @@
+/* 기본 스타일 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 변수 설정 */
+:root {
+    --primary-color: #00BFB3;
+    --secondary-color: #7C3AED;
+    --background-color: #F3F4F6;
+    --text-color: #1F2937;
+    --spacing-unit: 1rem;
+}
+
+body {
+    font-family: 'Pretendard', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* 헤더 스타일 */
+.header {
+    background-color: var(--primary-color);
+    padding: var(--spacing-unit);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header__logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 메인 컨테이너 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: calc(var(--spacing-unit) * 4) var(--spacing-unit);
+}
+
+/* 매운맛 테스트 섹션 */
+.spicy-test {
+    background: white;
+    border-radius: 1rem;
+    padding: var(--spacing-unit);
+    margin-bottom: var(--spacing-unit);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.spicy-test__title {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-unit);
+    color: var(--secondary-color);
+}
+
+/* 매운맛 게이지 */
+.spicy-gauge {
+    background: #f3f3f3;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: var(--spacing-unit) 0;
+}
+
+.spicy-gauge__fill {
+    height: 100%;
+    background: linear-gradient(to right, #4ADE80, #EF4444);
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+/* 버튼 스타일 */
+.button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #009B91;
+}
+
+/* 카드 그리드 */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-unit);
+    margin-top: var(--spacing-unit);
+}
+
+.card {
+    background: white;
+    border-radius: 1rem;
+    padding: var(--spacing-unit);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card__title {
+    font-size: 1.125rem;
+    margin-bottom: calc(var(--spacing-unit) * 0.5);
+}
+
+/* 폼 스타일 */
+.form-group {
+    margin-bottom: var(--spacing-unit);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: calc(var(--spacing-unit) * 0.5);
+    font-weight: bold;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .container {
+        padding: calc(var(--spacing-unit) * 3) var(--spacing-unit);
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
